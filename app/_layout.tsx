@@ -19,7 +19,7 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    SpaceMono: require("../assets/fonts/AvenirNextLTPro-Regular.otf"),
+    AvenirNextLTPro: require("../assets/fonts/AvenirNextLTPro-Regular.otf"),
     ...FontAwesome.font,
   });
 
@@ -45,6 +45,7 @@ function RootLayoutNav() {
   return (
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="signup/index" options={{ headerShown: false }} />
     </Stack>
   );
 }

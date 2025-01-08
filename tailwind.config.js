@@ -6,6 +6,13 @@ module.exports = {
     "./components/**/*.{js,jsx,ts,tsx}", // Include all JS, JSX, TS, and TSX files in the components folder]
   ],
   theme: {
+    colors: {
+      main: "#1ED760",
+      dark: "#121212",
+      dark1: "#282828",
+      dark2: "#777777",
+      white: "#ffffff",
+    },
     extend: {
       fontFamily: {
         rmono: ["AvenirNextLTPro-Regular", "sans-serif"],
