@@ -7,6 +7,8 @@ import facebook from "@/assets/images/facebook.png";
 import apple from "@/assets/images/apple.png";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
+import store from "@/redux/store";
+import { initialState } from "@/redux/userSlice";
 const App = () => {
   const router = useRouter();
 
@@ -52,7 +54,17 @@ const App = () => {
               </View>
             </Pressable>
           ))}
-          <Pressable className="mb-5">
+          <Pressable
+            className="mb-5"
+            onPress={() => {
+              // router.replace("/(tabs)/home");
+              if (store.getState().user === initialState.user) {
+                router.push("/signin");
+              } else {
+                router.replace("/(tabs)/home");
+              }
+            }}
+          >
             <Text className="text-white text-rmonoBold font-bold text-[17px] mt-2">
               Log in
             </Text>
