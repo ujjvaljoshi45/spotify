@@ -12,7 +12,6 @@ import { StatusBar } from "expo-status-bar";
 
 const MainScreenPage = ({ children }: { children: any }) => {
   const edgeVal = useSafeAreaInsets();
-  console.log(edgeVal);
   return (
     <View className={`flex-1 justify-center bg-dark`}>
       <View className={`flex-1 bg-dark mt-[${edgeVal.top - 1}px]`}>
