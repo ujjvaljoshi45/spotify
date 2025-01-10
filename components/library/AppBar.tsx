@@ -1,9 +1,7 @@
-import { View, Text, Image, SafeAreaView } from "react-native";
+import { View, Text, Image } from "react-native";
 import React from "react";
-import MainScreenPage from "@/components/MainScreenPage";
 import { MaterialIcons } from "@expo/vector-icons";
 import Colors from "@/constants/Colors";
-import PlaylistView from "@/components/PlaylistView";
 const AppBar = () => {
   return (
     <View className="flex-row px-4 mt-2  items-center justify-center">

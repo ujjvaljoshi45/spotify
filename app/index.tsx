@@ -1,10 +1,7 @@
 import { View, Text, Image, Pressable } from "react-native";
 import React from "react";
 import Scaffold from "@/components/Scaffold";
-import icon from "@/assets/images/adaptive-icon.png";
-import google from "@/assets/images/google.png";
-import facebook from "@/assets/images/facebook.png";
-import apple from "@/assets/images/apple.png";
+
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import store from "@/redux/store";
@@ -15,15 +12,15 @@ const App = () => {
   const socialsLogins = [
     {
       name: "Continue with Google",
-      icon: google,
+      icon: require("@/assets/images/google.png"),
     },
     {
       name: "Continue with Facebook",
-      icon: facebook,
+      icon: require("@/assets/images/facebook.png"),
     },
     {
       name: "Continue with Apple",
-      icon: apple,
+      icon: require("@/assets/images/apple.png"),
     },
   ];
   const handelSignUp = () => {
@@ -33,7 +30,10 @@ const App = () => {
     <Scaffold appBar={undefined} overrideClass={null}>
       <View className="flex-1 bg-dark justify-end items-center">
         <SafeAreaView className="flex-1 justify-end items-center">
-          <Image className="justify-center h-[53] w-[53]" source={icon} />
+          <Image
+            className="justify-center h-[53] w-[53]"
+            source={require("@/assets/images/adaptive-icon.png")}
+          />
           <Text className="text-white font-rmonoBold font-bold text-[26px] text-center pt-2">
             Millions of Songs. {"\n"}Free on Spotify.
           </Text>

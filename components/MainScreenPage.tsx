@@ -1,19 +1,14 @@
-import { View, Text, Image, Pressable } from "react-native";
+import { View, Text, Image, Pressable, SafeAreaView } from "react-native";
 import React from "react";
-import {
-  SafeAreaView,
-  useSafeAreaInsets,
-} from "react-native-safe-area-context";
 
 import { Icon, ProgressBar } from "react-native-paper";
 import Colors from "@/constants/Colors";
 const MainScreenPage = ({ children }: { children: any }) => {
-  const edgeVal = useSafeAreaInsets();
   return (
-    <View className="flex-1 bg-dark">
+    <SafeAreaView className="flex-1 bg-dark">
       {children}
       <MusicPlayerC />
-    </View>
+    </SafeAreaView>
   );
 };
 

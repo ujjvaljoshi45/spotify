@@ -1,9 +1,5 @@
-import { View, Text, Image, SafeAreaView } from "react-native";
+import { View, Text } from "react-native";
 import React from "react";
-import MainScreenPage from "@/components/MainScreenPage";
-import { MaterialIcons } from "@expo/vector-icons";
-import Colors from "@/constants/Colors";
-import PlaylistView from "@/components/PlaylistView";
 const ShortButtons = () => {
   return (
     <View className="flex-row my-4 mx-2 items-center justify-evenly">

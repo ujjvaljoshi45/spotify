@@ -7,7 +7,6 @@ import ShortButtons from "@/components/library/ShortButtons";
 const LibraryView = () => {
   return (
     <MainScreenPage>
-      <SafeAreaView />
       <AppBar />
       <ShortButtons />
       <View className="flex-row mx-4 items-center ">

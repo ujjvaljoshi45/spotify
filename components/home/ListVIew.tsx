@@ -1,18 +1,5 @@
-import {
-  View,
-  Text,
-  SafeAreaView,
-  FlatList,
-  Image,
-  ScrollView,
-} from "react-native";
+import { View, Text, FlatList, Image } from "react-native";
 import React from "react";
-import "react-native-safe-area-context";
-import MainScreenPage from "@/components/MainScreenPage";
-import Colors from "@/constants/Colors";
-import { FontAwesome6, Ionicons } from "@expo/vector-icons";
-import YEAR_IN_REVIEW from "@/constants/year-in-review";
-import EDITROS_PICK from "@/constants/home-data";
 
 const ListView = ({
   titleComponent,
