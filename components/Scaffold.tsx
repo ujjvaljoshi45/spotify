@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, Keyboard } from "react-native";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView, useSafeAreaFrame } from "react-native-safe-area-context";
 import { setStatusBarStyle, StatusBar } from "expo-status-bar";
 
 const Scaffold = ({
@@ -20,12 +20,13 @@ const Scaffold = ({
         Keyboard.dismiss();
       }}
     >
-      <View className={overrideClass === null ? "flex-1" : overrideClass}>
+      <View className={overrideClass === null ? `flex-1` : overrideClass}>
         <StatusBar
           networkActivityIndicatorVisible={true}
           backgroundColor="#121212"
           style="inverted"
         />
+
         {appBar}
         {children}
       </View>

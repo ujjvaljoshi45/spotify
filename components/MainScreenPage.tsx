@@ -4,19 +4,14 @@ import {
   SafeAreaView,
   useSafeAreaInsets,
 } from "react-native-safe-area-context";
-import Scaffold from "./Scaffold";
-import barAlbum from "@/assets/images/albums/barAlbum.png";
+
 import { Icon, ProgressBar } from "react-native-paper";
 import Colors from "@/constants/Colors";
-import { StatusBar } from "expo-status-bar";
-
 const MainScreenPage = ({ children }: { children: any }) => {
   const edgeVal = useSafeAreaInsets();
   return (
-    <View className={`flex-1 justify-center bg-dark`}>
-      <View className={`flex-1 bg-dark mt-[${edgeVal.top - 1}px]`}>
-        {children}
-      </View>
+    <View className="flex-1 bg-dark">
+      {children}
       <MusicPlayerC />
     </View>
   );
@@ -26,11 +21,11 @@ export default MainScreenPage;
 
 const MusicPlayerC = () => {
   return (
-    <View className="h-[60px] bg-mainZ justify-center px-3">
+    <View className="h-[60px] bg-mainZ justify-center px-3 pt-2 mb-2  shadow-dark1 shadow-inner">
       <View className="flex-1" />
       <View className="flex-row items-center ">
         <Image
-          source={barAlbum}
+          source={require("@/assets/images/albums/barAlbum.png")}
           className="bg-dark h-[37px] w-[37px] rounded-[6.5px]"
         />
 
