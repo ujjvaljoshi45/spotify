@@ -1,6 +1,7 @@
-import { View, FlatList, Image, Text } from "react-native";
+import { View, FlatList, Image, Text, Pressable } from "react-native";
 import React from "react";
 import "react-native-safe-area-context";
+import { router } from "expo-router";
 
 const recentlyPlayed = [
   {
@@ -31,7 +32,12 @@ const RecentlyPlayed = () => {
       data={recentlyPlayed}
       keyExtractor={(item) => item.name}
       renderItem={(item) => (
-        <View className="py-3 pr-4">
+        <Pressable
+          className="py-3 pr-4"
+          onPress={() => {
+            router.push("/home/playlist-info");
+          }}
+        >
           <Image
             source={item.item.image}
             className="h-[105px] w-[105px] py-1 pr-1"
@@ -39,7 +45,7 @@ const RecentlyPlayed = () => {
           <Text className="text-white font-semibold text-[13px] pl-1 pt-1">
             {item.item.name}
           </Text>
-        </View>
+        </Pressable>
       )}
     />
   );

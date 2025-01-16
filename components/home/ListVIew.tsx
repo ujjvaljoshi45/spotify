@@ -1,5 +1,6 @@
-import { View, Text, FlatList, Image } from "react-native";
+import { View, Text, FlatList, Image, Pressable } from "react-native";
 import React from "react";
+import { router } from "expo-router";
 
 const ListView = ({
   titleComponent,
@@ -19,7 +20,12 @@ const ListView = ({
         horizontal
         data={data}
         renderItem={(item) => (
-          <View className="mr-3">
+          <Pressable
+            className="mr-3"
+            onPress={() => {
+              router.push("/home/playlist-info");
+            }}
+          >
             <Image source={item.item.image} className="h-[153px] w-[153px]" />
             <Text
               className={
@@ -29,7 +35,7 @@ const ListView = ({
             >
               {item.item.name}
             </Text>
-          </View>
+          </Pressable>
         )}
         keyExtractor={(item) => item.index}
       />

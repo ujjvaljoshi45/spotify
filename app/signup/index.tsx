@@ -126,7 +126,7 @@ const SignUpView = () => {
         store.dispatch(createUser(newUser));
         console.log(store.getState().user);
         router.dismissAll();
-        router.replace("/(tabs)/home");
+        router.replace("/home/(tabs)/home");
       } else {
         setIndex(currentIndex + 1);
       }

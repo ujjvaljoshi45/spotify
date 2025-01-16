@@ -4,7 +4,6 @@ import Scaffold from "@/components/Scaffold";
 import AuthAppBar from "@/components/AuthAppBar";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { TextInput } from "react-native-paper";
-import { AntDesign } from "@expo/vector-icons";
 import Colors from "@/constants/Colors";
 import { router } from "expo-router";
 
@@ -44,7 +43,7 @@ const SignInView = () => {
                 className="bg-white flex-wrap rounded-full px-5 py-3"
                 onPress={() => {
                   router.dismissAll();
-                  router.replace("/(tabs)/home");
+                  router.replace("/home/(tabs)/home");
                 }}
               >
                 <Text className="text-dark font-bold">Log in</Text>

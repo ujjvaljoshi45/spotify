@@ -15,6 +15,7 @@ const Page = () => {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: true,
+
         tabBarStyle: {
           backgroundColor: Colors.colors.dark, // Spotify black
           borderTopWidth: 0,

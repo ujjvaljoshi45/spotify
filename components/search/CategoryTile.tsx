@@ -1,5 +1,6 @@
-import { View, Text, Dimensions, Image } from "react-native";
+import { View, Text, Dimensions, Image, Pressable } from "react-native";
 import React from "react";
+import { router } from "expo-router";
 const { width } = Dimensions.get("window");
 const itemWidth = width / 2 - 16; // Adjust for padding/margin
 
@@ -15,7 +16,12 @@ const allImages = [
 
 const CategoryTile = ({ myCategory }: { myCategory: any }) => {
   return (
-    <View className="mt-4 mx-4">
+    <Pressable
+      className="mt-4 mx-4"
+      onPress={() => {
+        router.push("/home/playlist-info");
+      }}
+    >
       <Text className="text-white mb-3 font-bold text-[16px]">
         {myCategory.name}
       </Text>
@@ -45,7 +51,7 @@ const CategoryTile = ({ myCategory }: { myCategory: any }) => {
           </View>
         ))}
       </View>
-    </View>
+    </Pressable>
   );
 };
 

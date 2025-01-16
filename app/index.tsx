@@ -57,11 +57,10 @@ const App = () => {
           <Pressable
             className="mb-5"
             onPress={() => {
-              // router.replace("/(tabs)/home");
               if (store.getState().user === initialState.user) {
                 router.push("/signin");
               } else {
-                router.replace("/(tabs)/home");
+                router.replace("/home/(tabs)/home");
               }
             }}
           >
